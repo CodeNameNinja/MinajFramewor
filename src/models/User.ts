@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 interface UserProps {
   name?: string;
   age?: number;
 }
+type Callback = () => {};
 
 export class User {
   constructor(private data: UserProps) {}
@@ -14,18 +14,6 @@ export class User {
   set(update: UserProps): void {
     Object.assign(this.data, update);
   }
-}
-=======
-interface UserProps{
-  name:string; 
-  age:number;
-}
 
-export class User{
-  constructor(private data: UserProps){}
-
-  get(propName:string): (string | number){
-    return this.data[propName];
-  }
+  on(eventName: string, callback: Callback): void {}
 }
->>>>>>> 6c09b38a0c97a452576df5f10c1049c0b565ac7f
